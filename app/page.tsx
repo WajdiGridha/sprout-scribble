@@ -6,8 +6,7 @@ export default async function Home() {
 
   return (
     <main className="">
-    <h1>hey</h1>
-    <Button>Click me</Button>
+      <h1>hey</h1>
     </main>
   );
 }
