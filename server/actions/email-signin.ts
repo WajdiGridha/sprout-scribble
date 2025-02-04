@@ -15,16 +15,16 @@ export const emailSignIn = action(
   LoginSchema,
   async ({ email, password, code }) => {
     try {
-      // Check if the user exists in the database
+      //Check if the user is in the database
       const existingUser = await db.query.users.findFirst({
         where: eq(users.email, email),
       })
 
-      if (!existingUser) {  // Vérifie si aucun utilisateur n'est trouvé
-        return { error: "Email not found" }
+      if (existingUser?.email !== email) {
+        return { error: "Email not  found" }
       }
 
-      // If the user is not verified
+      //If the user is not verified
       if (!existingUser.emailVerified) {
         const verificationToken = await generateEmailVerificationToken(
           existingUser.email
@@ -36,7 +36,7 @@ export const emailSignIn = action(
         return { success: "Confirmation Email Sent!" }
       }
 
-      // 2FA TODO
+      //2FA TODO
 
       await signIn("credentials", {
         email,
