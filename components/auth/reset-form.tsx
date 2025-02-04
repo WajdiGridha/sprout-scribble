@@ -70,7 +70,7 @@ export default function ResetForm() {
                                         <FormControl>
                                             <Input
                                                 {...field}
-                                                placeholder="developedbyed@gmail.com"
+                                                placeholder="wajdigridha744@gmail.com"
                                                 type="email"
                                                 disabled={status === "executing"}
                                                 autoComplete="email"
