@@ -36,6 +36,13 @@
       "when": 1738951294334,
       "tag": "0004_windy_human_cannonball",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1739201894464,
+      "tag": "0005_slim_calypso",
+      "breakpoints": true
     }
   ]
 }
