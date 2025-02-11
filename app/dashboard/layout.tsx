@@ -26,22 +26,22 @@ export default async function DashboardLayout({
   const adminLinks =
     session?.user.role === "admin"
       ? [
-          {
-            label: "Analytics",
-            path: "/dashboard/analytics",
-            icon: <BarChart size={16} />,
-          },
-          {
-            label: "Create",
-            path: "/dashboard/add-product",
-            icon: <PenSquare size={16} />,
-          },
-          {
-            label: "Products",
-            path: "/dashboard/products",
-            icon: <Package size={16} />,
-          },
-        ]
+        {
+          label: "Analytics",
+          path: "/dashboard/analytics",
+          icon: <BarChart size={16} />,
+        },
+        {
+          label: "Create",
+          path: "/dashboard/add-product",
+          icon: <PenSquare size={16} />,
+        },
+        {
+          label: "Products",
+          path: "/dashboard/products",
+          icon: <Package size={16} />,
+        },
+      ]
       : []
 
   const allLinks = [...adminLinks, ...userLinks]
