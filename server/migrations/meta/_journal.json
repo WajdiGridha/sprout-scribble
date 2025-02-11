@@ -43,6 +43,13 @@
       "when": 1739201894464,
       "tag": "0005_slim_calypso",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1739231932945,
+      "tag": "0006_mysterious_silver_surfer",
+      "breakpoints": true
     }
   ]
 }
