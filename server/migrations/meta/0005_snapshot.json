@@ -1,10 +1,8 @@
 {
-  "id": "e1685218-8b38-40e7-9c1e-8776d140edca",
-  "prevId": "9d72dfb3-6c29-4321-8c38-6e61f8784e88",
-  "version": "5",
-  "dialect": "pg",
+  "version": "6",
+  "dialect": "postgresql",
   "tables": {
-    "account": {
+    "public.account": {
       "name": "account",
       "schema": "",
       "columns": {
@@ -80,15 +78,15 @@
         "account_userId_user_id_fk": {
           "name": "account_userId_user_id_fk",
           "tableFrom": "account",
-          "tableTo": "user",
           "columnsFrom": [
             "userId"
           ],
+          "tableTo": "user",
           "columnsTo": [
             "id"
           ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
+          "onUpdate": "no action",
+          "onDelete": "cascade"
         }
       },
       "compositePrimaryKeys": {
@@ -102,7 +100,7 @@
       },
       "uniqueConstraints": {}
     },
-    "email_tokens": {
+    "public.email_tokens": {
       "name": "email_tokens",
       "schema": "",
       "columns": {
@@ -144,7 +142,7 @@
       },
       "uniqueConstraints": {}
     },
-    "password_reset_tokens": {
+    "public.password_reset_tokens": {
       "name": "password_reset_tokens",
       "schema": "",
       "columns": {
@@ -186,7 +184,7 @@
       },
       "uniqueConstraints": {}
     },
-    "products": {
+    "public.products": {
       "name": "products",
       "schema": "",
       "columns": {
@@ -227,7 +225,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "two_factor_tokens": {
+    "public.two_factor_tokens": {
       "name": "two_factor_tokens",
       "schema": "",
       "columns": {
@@ -267,15 +265,15 @@
         "two_factor_tokens_userID_user_id_fk": {
           "name": "two_factor_tokens_userID_user_id_fk",
           "tableFrom": "two_factor_tokens",
-          "tableTo": "user",
           "columnsFrom": [
             "userID"
           ],
+          "tableTo": "user",
           "columnsTo": [
             "id"
           ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
+          "onUpdate": "no action",
+          "onDelete": "cascade"
         }
       },
       "compositePrimaryKeys": {
@@ -289,7 +287,7 @@
       },
       "uniqueConstraints": {}
     },
-    "user": {
+    "public.user": {
       "name": "user",
       "schema": "",
       "columns": {
@@ -351,18 +349,21 @@
     }
   },
   "enums": {
-    "roles": {
+    "public.roles": {
       "name": "roles",
-      "values": {
-        "user": "user",
-        "admin": "admin"
-      }
+      "schema": "public",
+      "values": [
+        "user",
+        "admin"
+      ]
     }
   },
   "schemas": {},
   "_meta": {
-    "columns": {},
     "schemas": {},
-    "tables": {}
-  }
+    "tables": {},
+    "columns": {}
+  },
+  "id": "e1685218-8b38-40e7-9c1e-8776d140edca",
+  "prevId": "9d72dfb3-6c29-4321-8c38-6e61f8784e88"
 }
